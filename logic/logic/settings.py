@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql', 
         'NAME': 'red_social', 
         'USER': 'postgres', 
-        'PASSWORD': '', 
+        'PASSWORD': '123456789', 
         'HOST': 'localhost', 
         'PORT': '5432', 
     }
