@@ -37,10 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #extensiones
+    'rest_framework',
+    'corsheaders',
+    #aplicaciones
     'usuario',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # con cors se Permite peticiones desde el frontend
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -125,3 +130,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Puerto donde corre Vite (React)
+]
